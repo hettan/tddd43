@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/getopt/getopt.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/procalign.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/align.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/alignsvc.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/ontowrap.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/xsdlib/relaxngDatatype.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/xsdlib/xsdlib.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/iddl/iddl.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/jade/http.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/jade/iiop.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/jade/jade.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/xerces/resolver.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/xerces/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/servlet/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/oyster/oyster2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/owlapi30/owlapi-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/owlapi10/api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/owlapi10/impl.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/owlapi10/io.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/owlapi10/rdfapi.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/owlapi10/rdfparser.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/ontosim/ontosim.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/log4j/commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/log4j/log4j.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/log4j/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/log4j/slf4j-log4j.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/jwnl/jwnl.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/jetty/jetty.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/jetty/jetty-util.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/jena/arq.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/jena/icu4j.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/jena/iri.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/align-4.0/lib/jena/jena.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

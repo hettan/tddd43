@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/home/jacob/courses/tddd43/lab1/xml_schema.xsd">
+    <topics>
+        <topic id="ID005" originator="ID002">
+            <name>Computer Science</name>
+            <text>It's fun!</text>
+        </topic>
+        <topic id="ID000" originator="ID002" parent="ID005">
+            <name>Java</name>
+            <text>An object oriented language</text>
+        </topic>
+        <topic id="ID001" originator="ID003" parent="ID005">
+            <name>XML</name>
+            <text>Use JSON instead! :)</text>
+        </topic>
+    </topics>
+    <experts>
+        <expert id="ID002">
+            <name>Jacob</name>
+            <email>jacho391@student.liu.se</email>
+            <description>Im a student!</description>
+            <expertizes>
+                <expertize topic="ID000"/>
+                <expertize topic="ID001"/>
+            </expertizes>
+            <recommendations>
+                <recommendation recommendee="ID010">
+                    <text>Good at XML!</text>
+                </recommendation>
+            </recommendations>
+        </expert>
+        <expert id="ID003">
+            <name>Oliver</name>
+            <email>olist125@student.liu.se</email>
+            <description>Im a professor!</description>
+            <expertizes>
+                <expertize topic="ID001"/>
+            </expertizes>
+            <recommendations>
+                <recommendation recommendee="ID002">
+                    <text>He's awesome!</text>
+                </recommendation>
+            </recommendations>
+        </expert>
+        <expert id="ID010">
+            <name>John</name>
+            <email>john@doe.se</email>
+            <description>Im not a student!</description>
+            <expertizes>
+                <expertize topic="ID000"/>
+                <expertize topic="ID001"/>
+            </expertizes>
+            <recommendations>
+              
+            </recommendations>
+        </expert>
+    </experts>
+</db>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="db">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="topics">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="topic" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="text" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required"/>
+                                    <xs:attribute name="originator" type="xs:IDREF" use="required"/>
+                                    <xs:attribute name="parent" type="xs:IDREF"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="experts">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="expert" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="email" type="xs:string"/>
+                                        <xs:element name="description" type="xs:string"/>
+                                        <xs:element name="expertizes">
+                                            <xs:complexType>
+                                                <xs:sequence maxOccurs="unbounded">
+                                                    <xs:element name="expertize">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="topic" type="xs:IDREF" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="recommendations">
+                                            <xs:complexType>
+                                                <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                                                    <xs:element name="recommendation">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="text" type="xs:string"/>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="recommendee" type="xs:IDREF" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    
+                                    <xs:attribute name="id" type="xs:ID" use="required"/>
+                                </xs:complexType>
+                             
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+<!-- keys -->
+        <xs:key name="expert_key">
+            <xs:selector xpath=".//expert"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:key name="topic_key">
+            <xs:selector xpath=".//topic"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+<!-- key refs -->
+        <xs:keyref name="originator_ref" refer="expert_key">
+            <xs:selector xpath=".//topic"/>
+            <xs:field xpath="@originator"/>
+        </xs:keyref>
+        <xs:keyref name="expertize_ref" refer="topic_key">
+            <xs:selector xpath=".//expertize"/>
+            <xs:field xpath="@topic"/>
+        </xs:keyref>
+        <xs:keyref name="recommendee_ref" refer="expert_key">
+            <xs:selector xpath=".//recommendation"/>
+            <xs:field xpath="@recommendee"/>
+        </xs:keyref>
+        <xs:keyref name="parent_topic_ref" refer="topic_key">
+            <xs:selector xpath=".//topic"/>
+            <xs:field xpath="@parent"/>
+        </xs:keyref>
+        
+    </xs:element>
+</xs:schema>

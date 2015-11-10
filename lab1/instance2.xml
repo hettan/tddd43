@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<expert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/home/jacob/courses/tddd43/lab1/xml_schema.xsd">
+    <id>
+    </id>
+    <name>name0</name>
+    <email>email0</email>
+    <description>
+        <text>text0</text>
+    </description>
+    <expertizes>
+    </expertizes>
+    <expertizes>
+    </expertizes>
+</expert>
