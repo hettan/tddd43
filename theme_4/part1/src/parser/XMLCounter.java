@@ -50,8 +50,6 @@ public class XMLCounter implements ContentHandler {
 		int num = levelNumbers.get(level - 1);
 		levelNumbers.set(level - 1, num + 1);
 
-		System.out.println("New path: " + currentPath());
-		
 		String path = currentPath();
 		String tagPath = path + localName + ".tag";
 		String attributePath = path + localName + ".attr";
@@ -89,9 +87,9 @@ public class XMLCounter implements ContentHandler {
 	}
 	
 	private void appendToFile(String path, String content) {
-		System.out.println("Append to path "+path);
+	
 		try {
-			FileWriter fileWriter = new FileWriter(path);
+		    FileWriter fileWriter = new FileWriter(path, true);
 	        BufferedWriter bufferedWriter =
 	                new BufferedWriter(fileWriter);
 	        bufferedWriter.append(content);
@@ -127,7 +125,6 @@ public class XMLCounter implements ContentHandler {
                            String qName) throws SAXException {
         
     	level--;
-        System.out.println("End Element :" + qName);
         
         path.remove(path.size() - 1);
         
@@ -141,7 +138,7 @@ public class XMLCounter implements ContentHandler {
     
     
     public void endDocument( ) throws SAXException {
-        System.out.println("End of docuement ");
+        
     }
     
     // Do-nothing methods we have to implement only to fulfill

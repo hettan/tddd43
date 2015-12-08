@@ -1,0 +1,66 @@
+15/12/08 15:14:41 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+15/12/08 15:14:41 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+15/12/08 15:14:41 INFO input.FileInputFormat: Total input paths to process : 1
+15/12/08 15:14:41 INFO input.FileInputFormat: Total input paths to process : 1
+15/12/08 15:14:41 WARN snappy.LoadSnappy: Snappy native library is available
+15/12/08 15:14:41 INFO snappy.LoadSnappy: Snappy native library loaded
+15/12/08 15:14:41 INFO mapred.JobClient: Running job: job_local_0001
+15/12/08 15:14:41 INFO mapred.LocalJobRunner: Waiting for map tasks
+15/12/08 15:14:41 INFO mapred.LocalJobRunner: Starting task: attempt_local_0001_m_000000_0
+15/12/08 15:14:41 INFO util.ProcessTree: setsid exited with exit code 0
+15/12/08 15:14:41 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@5f0ab09f
+15/12/08 15:14:41 INFO mapred.MapTask: Processing split: org.apache.hadoop.mapreduce.lib.input.TaggedInputSplit@27b62aab
+15/12/08 15:14:41 INFO mapred.MapTask: io.sort.mb = 100
+15/12/08 15:14:41 INFO mapred.MapTask: data buffer = 79691776/99614720
+15/12/08 15:14:41 INFO mapred.MapTask: record buffer = 262144/327680
+15/12/08 15:14:41 INFO mapred.MapTask: Starting flush of map output
+15/12/08 15:14:41 INFO mapred.MapTask: Finished spill 0
+15/12/08 15:14:41 INFO mapred.Task: Task:attempt_local_0001_m_000000_0 is done. And is in the process of commiting
+15/12/08 15:14:41 INFO mapred.LocalJobRunner: 
+15/12/08 15:14:41 INFO mapred.Task: Task 'attempt_local_0001_m_000000_0' done.
+15/12/08 15:14:41 INFO mapred.LocalJobRunner: Finishing task: attempt_local_0001_m_000000_0
+15/12/08 15:14:41 INFO mapred.LocalJobRunner: Starting task: attempt_local_0001_m_000001_0
+15/12/08 15:14:41 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@291946c2
+15/12/08 15:14:41 INFO mapred.MapTask: Processing split: org.apache.hadoop.mapreduce.lib.input.TaggedInputSplit@366782a9
+15/12/08 15:14:41 INFO mapred.MapTask: io.sort.mb = 100
+15/12/08 15:14:41 INFO mapred.MapTask: data buffer = 79691776/99614720
+15/12/08 15:14:41 INFO mapred.MapTask: record buffer = 262144/327680
+15/12/08 15:14:41 INFO mapred.MapTask: Starting flush of map output
+15/12/08 15:14:41 INFO mapred.Task: Task:attempt_local_0001_m_000001_0 is done. And is in the process of commiting
+15/12/08 15:14:41 INFO mapred.LocalJobRunner: 
+15/12/08 15:14:41 INFO mapred.Task: Task 'attempt_local_0001_m_000001_0' done.
+15/12/08 15:14:41 INFO mapred.LocalJobRunner: Finishing task: attempt_local_0001_m_000001_0
+15/12/08 15:14:41 INFO mapred.LocalJobRunner: Map task executor complete.
+15/12/08 15:14:41 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@456dfa45
+15/12/08 15:14:41 INFO mapred.LocalJobRunner: 
+15/12/08 15:14:41 INFO mapred.Merger: Merging 2 sorted segments
+15/12/08 15:14:41 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 1192 bytes
+15/12/08 15:14:41 INFO mapred.LocalJobRunner: 
+15/12/08 15:14:41 INFO mapred.Task: Task:attempt_local_0001_r_000000_0 is done. And is in the process of commiting
+15/12/08 15:14:41 INFO mapred.LocalJobRunner: 
+15/12/08 15:14:41 INFO mapred.Task: Task attempt_local_0001_r_000000_0 is allowed to commit now
+15/12/08 15:14:41 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0001_r_000000_0' to output
+15/12/08 15:14:41 INFO mapred.LocalJobRunner: reduce > reduce
+15/12/08 15:14:41 INFO mapred.Task: Task 'attempt_local_0001_r_000000_0' done.
+15/12/08 15:14:42 INFO mapred.JobClient:  map 50% reduce 100%
+15/12/08 15:14:42 INFO mapred.JobClient: Job complete: job_local_0001
+15/12/08 15:14:42 INFO mapred.JobClient: Counters: 17
+15/12/08 15:14:42 INFO mapred.JobClient:   FileSystemCounters
+15/12/08 15:14:42 INFO mapred.JobClient:     FILE_BYTES_READ=32383
+15/12/08 15:14:42 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=189732
+15/12/08 15:14:42 INFO mapred.JobClient:   Map-Reduce Framework
+15/12/08 15:14:42 INFO mapred.JobClient:     Map input records=30
+15/12/08 15:14:42 INFO mapred.JobClient:     Reduce shuffle bytes=0
+15/12/08 15:14:42 INFO mapred.JobClient:     Spilled Records=60
+15/12/08 15:14:42 INFO mapred.JobClient:     Map output bytes=1130
+15/12/08 15:14:42 INFO mapred.JobClient:     CPU time spent (ms)=0
+15/12/08 15:14:42 INFO mapred.JobClient:     Total committed heap usage (bytes)=778174464
+15/12/08 15:14:42 INFO mapred.JobClient:     Combine input records=0
+15/12/08 15:14:42 INFO mapred.JobClient:     SPLIT_RAW_BYTES=656
+15/12/08 15:14:42 INFO mapred.JobClient:     Reduce input records=30
+15/12/08 15:14:42 INFO mapred.JobClient:     Reduce input groups=20
+15/12/08 15:14:42 INFO mapred.JobClient:     Combine output records=0
+15/12/08 15:14:42 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+15/12/08 15:14:42 INFO mapred.JobClient:     Reduce output records=30
+15/12/08 15:14:42 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+15/12/08 15:14:42 INFO mapred.JobClient:     Map output records=30

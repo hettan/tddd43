@@ -17,18 +17,22 @@ public class JoinMapper2
   @Override
   protected void map(LongWritable key, Text value, Context context)
       throws IOException, InterruptedException {
-	  	System.out.println("Mapper2 key = "+key);
-	  	System.out.println("Mapper2 value = "+value);
-	  	System.out.println("Mapper2 context = "+context.toString());
-	  	
 	  	String line = value.toString();
-	  	String[] values = line.split(" ");
-	  	String dewey = values[0];
+	  	String[] values = line.split("\\s+");
+
+		String dewey = values[0];
 	  	String type = values[1];
 	  	String val = values[2];
 	  	
 	  	if (type.equals(typeName)) {
-	  		String deweyPid = dewey.substring(0, dewey.length() - 4);
+		    String[] deweyNumbers = dewey.split("\\.");
+		    int deweyRemoveLength;
+		    if (deweyNumbers.length > 2) {
+			deweyRemoveLength = deweyNumbers[deweyNumbers.length - 2].length() + deweyNumbers[deweyNumbers.length - 1].length() + 2;
+		    } else {
+			deweyRemoveLength = dewey.length();
+		    }
+		    String deweyPid = dewey.substring(0, dewey.length() - deweyRemoveLength);
 	  		TextPair pair = new TextPair(deweyPid, val);
 	  		context.write(pair, new Text(this.getClass().getName()));
 	  	}

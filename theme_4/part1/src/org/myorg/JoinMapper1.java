@@ -21,10 +21,6 @@ public class JoinMapper1
   protected void map(LongWritable key, Text value, Context context)
       throws IOException, InterruptedException {
   
-	  	System.out.println("Mapper1 key = "+key);
-	  	System.out.println("Mapper1 value = "+value);
-	  	System.out.println("Mapper1 context = "+context.toString());
-	  	
 /* here the code for retrieving the triples from file01 and send the prefix of the dewey_pid as key */
 	  	String line = value.toString();
 	  	String[] values = line.split(" ");
@@ -33,7 +29,15 @@ public class JoinMapper1
 	  	String val = values[2];
 	  	
 	  	if (type.equals(typeName) && val.contains(attrContains)) {
-	  		String deweyPid = dewey.substring(0, dewey.length() - 4);
+		    String[] deweyNumbers = dewey.split(".");
+
+		    int deweyRemoveLength;
+		    if (deweyNumbers.length > 2) {
+			deweyRemoveLength = deweyNumbers[deweyNumbers.length - 2].length() + deweyNumbers[deweyNumbers.length - 1].length() + 2;
+		    } else {
+			deweyRemoveLength = dewey.length();
+		    }
+		    String deweyPid = dewey.substring(0, dewey.length() - deweyRemoveLength);
 	  		TextPair pair = new TextPair(deweyPid, val);
 	  		context.write(pair, new Text(this.getClass().getName()));
 	  	}

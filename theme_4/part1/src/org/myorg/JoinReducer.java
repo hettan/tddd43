@@ -20,7 +20,7 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
       while (itr.hasNext()) {
     	  Text value = itr.next();
     	  if (!isFromMapper1(value)) {
-    		  context.write(value, new Text(this.getClass().getName()));
+	      context.write(key.getFirst(), key.getSecond());
     	  } 
       }
       
