@@ -23,13 +23,14 @@ public class JoinMapper1
   
 /* here the code for retrieving the triples from file01 and send the prefix of the dewey_pid as key */
 	  	String line = value.toString();
-	  	String[] values = line.split(" ");
+	  	String[] values = line.split("\\s+");
+	  	
 	  	String dewey = values[0];
 	  	String type = values[1];
 	  	String val = values[2];
 	  	
 	  	if (type.equals(typeName) && val.contains(attrContains)) {
-		    String[] deweyNumbers = dewey.split(".");
+		    String[] deweyNumbers = dewey.split("\\.");
 
 		    int deweyRemoveLength;
 		    if (deweyNumbers.length > 2) {
